@@ -3,8 +3,9 @@ Using python
 
 Extract stock sentiments on financial news headlines, plot the hourly/daily sentiments in a Flask web app and deploy it online.
 
-# Workflow :
+# Project Directory Structure
 
+```
 stock_sentiment_webapp/
 │
 ├── app/
@@ -22,6 +23,8 @@ stock_sentiment_webapp/
 │
 ├── requirements.txt
 └── run.py
+```
+
 
 
 
