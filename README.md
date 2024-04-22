@@ -39,31 +39,27 @@ stock_sentiment_webapp/
 7. requirements.txt: Lists the required Python packages for the project.
 8. run.py: Script to run the Flask application.
 
+# Flask Application Structure:
 
-# Updating the Flask Application for Professionalism
+The `app` directory contains all application-related files.
 
-## Flask Application Structure:
-- We'll utilize the Flask application factory pattern for better organization.
-- Separate routes into a `routes.py` file.
-- Move HTML templates and static files into appropriate directories.
+- `__init__.py` initializes the Flask application.
+- `routes.py` contains the route definitions.
+- HTML templates are stored in the `templates` directory.
+- Static files like CSS are stored in the `static` directory.
 
-## Code Modularity:
-- Break down the functions into smaller, more manageable parts.
-- Encapsulate related functionality into classes or modules.
-- Add docstrings to functions for documentation.
+## Data Directory:
 
-## Styling:
-- Add CSS styling to improve the appearance of the web pages.
-- Ensure consistency in design and layout.
+The `data` directory stores text files containing information about Apple Inc. and the fruit.
 
-## Error Handling and Logging:
-- Implement error handling to gracefully handle exceptions.
-- Use logging to record errors and events for debugging purposes.
+## Requirements File:
 
-## Documentation:
-- Add comments to explain the purpose and functionality of code blocks.
-- Provide a README.md file with instructions on how to run the project.
+`requirements.txt` lists all the Python packages required by the application.
 
-## Testing and Validation:
-- Test the application thoroughly to ensure correctness and reliability.
-- Validate user inputs and handle edge cases appropriately.
+## Run Script:
+
+`run.py` is the script to run the Flask application.
+
+
+
+
