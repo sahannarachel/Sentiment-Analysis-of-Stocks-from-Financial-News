@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock News Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #377ba8;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            height: 40px;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            height: 40px;
+            font-size: 16px;
+            padding: 5px 20px;
+            border: none;
+            background-color: #377ba8;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #306293;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #377ba8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock News Sentiment Analyzer</h1>
+        <h2>Enter a Stock Ticker Symbol to See the Hourly and Daily Sentiment Scores</h2>
+        <form action="sentiment" method="POST">
+            <label for="ticker">Stock Ticker Symbol:</label>
+            <input id="ticker" name="ticker" type="text" required>
+            <input type="submit" value="Submit">
+        </form>
+        <p>
+            The sentiment is obtained by performing sentiment analysis on recent news headlines using the
+            <a href="https://www.nltk.org/_modules/nltk/sentiment/vader.html">NLTK Sentiment Vader Python library</a>.
+            <br>
+            The recent news headlines are obtained from <a href="https://finviz.com">FinViz website</a>.
+        </p>
+        <p class="disclaimer">
+            Disclaimer: This page is not meant to represent any form of financial advice.
+            Any investments you make will carry risk so remember to do your due diligence and research before doing so.
+        </p>
+    </div>
+</body>
+</html>

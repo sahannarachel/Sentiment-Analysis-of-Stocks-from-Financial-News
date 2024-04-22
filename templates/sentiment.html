@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Stock News Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: LightBlue;
+            margin: 0;
+            padding: 0;
+        }
+        
+        a, h1, h2, h4 {
+            color: #377ba8;
+            text-decoration: none;
+        }
+        
+        h1, h2, h4 {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        h4 {
+            font-size: 1em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .description {
+            font-size: 1em;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border-bottom: 1px solid #C8C8C8;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .button {
+            display: block;
+            width: 220px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 30px auto;
+            background-color: #3EACBA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .button:hover {
+            background-color: #48C6D4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock News Sentiment Analyzer</h1>
+        <h4><a href="/">Go back and enter another ticker</a></h4>
+        <div id="chart" class="chart"></div>
+        <div id="chart2" class="chart2"></div>
+        <p class="description">{{ description }}</p>
+        <table>
+            {{ table|safe }}
+        </table>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var graph_hourly = {{ graphJSON_hourly|safe }};
+        Plotly.plot('chart', graph_hourly, {});
+
+        var graph_daily = {{ graphJSON_daily|safe }};
+        Plotly.newPlot('chart2', graph_daily, {});
+    </script>
+</body>
+</html>
