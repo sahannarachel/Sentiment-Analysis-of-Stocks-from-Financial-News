@@ -105,8 +105,8 @@ The `data` directory stores text files containing information about Apple Inc. a
    
 9. **Data Directory:**
    - Contains text files with information about Apple Inc. and the fruit.
-   - `apple-computers.txt`: Text file containing information about Apple Inc.
-   - `apple-fruit.txt`: Text file containing information about the apple fruit.
+   - `apple-computers.txt`: A text file containing information about Apple Inc.
+   - `apple-fruit.txt`: A text file containing information about the apple fruit.
    
 10. **Requirements File:**
     - `requirements.txt`: Lists all the Python packages required by the application.
@@ -126,7 +126,7 @@ The `data` directory stores text files containing information about Apple Inc. a
     
 14. **Parsing and Sentiment Analysis:**
     - The `get_news()` function extracts news headlines from the FinViz website for a given stock ticker.
-    - The `parse_news()` function parses the HTML content of news headlines into a DataFrame.
+    - The `parse_news()` function parses the HTML content of news headlines into a data frame.
     - The `score_news()` function assigns sentiment scores to each headline using the NLTK Vader library.
     
 15. **Plotting Sentiment Scores:**
@@ -135,7 +135,7 @@ The `data` directory stores text files containing information about Apple Inc. a
 
 16. **Flask Routes:**
     - The `/` route renders the index.html template, which displays the input form.
-    - The `/sentiment` route processes the form submission, retrieves sentiment analysis results, and renders the sentiment.html template.
+    - The `/sentiment` route processes the form submission, retrieves sentiment analysis results and renders the sentiment.html template.
 
 17. **User Interaction:**
     - Users input a stock ticker in the index.html form.
